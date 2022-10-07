@@ -1,0 +1,41 @@
+<html>
+  <head>
+    <title>請啟動 Cookie - Koolisw網站</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://static.koolisw.tk/resources/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://static.koolisw.tk/resources/background.css"
+    />
+    <script src="https://static.koolisw.tk/resources/LoadAdobeFont.js"></script>
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://static.koolisw.tk/resources/webicon.ico"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://static.koolisw.tk/resources/webicon.ico"
+    />
+  </head>
+
+  <body style="background-color: #2c2f33">
+    <div class="error_success" id="main"></div>
+    <script>
+      window.onload = () => {
+        if (!navigator.cookieEnabled) {
+          return (document.getElementById('main').innerHTML =
+            '<center><img src="https://static.koolisw.tk/resources/cookie.svg" alt="404 Not Found" style="width: 100px; height: 100px" /><h2 style="color: White">請啟動 Cookie 以確保網站正常運作</h2></center>')
+        }
+        return window.location.replace('https://bot.koolisw.tk/verify/')
+      }
+    </script>
+  </body>
+</html>

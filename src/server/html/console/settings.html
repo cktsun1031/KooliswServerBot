@@ -1,0 +1,167 @@
+<html>
+  <head>
+    <title>Owner Console</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://static.koolisw.tk/resources/webicon.ico"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://static.koolisw.tk/resources/webicon.ico"
+    />
+    <style>
+      .footer {
+        font-family: Arial, Helvetica, sans-serif;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        color: white;
+        text-align: center;
+        background-color: #2c2f33;
+      }
+      .gg {
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+        margin-top: 0%;
+      }
+    </style>
+  </head>
+  <body style="background-color: #2c2f33">
+    <div class="gg">
+      <h1 style="color: White">Admin Console</h1>
+      <center>
+        <form
+          align="center"
+          action="/console/actions/modifydata"
+          method="POST"
+          onsubmit="myFunction()"
+        >
+          <p style="color: White">Suggestion Channel Message ID:</p>
+          <input
+            type="checkbox"
+            onchange="document.getElementById('suggestioncmsgid').disabled = !this.checked; document.getElementById('suggestioncmsgid').required = !!this.checked;"
+          />
+          <input
+            type="number"
+            disabled
+            id="suggestioncmsgid"
+            name="suggestioncmsgid"
+            placeholder="ID"
+          />
+          <p style="color: White">Youtube Suggestion Channel Message ID:</p>
+          <input
+            type="checkbox"
+            onchange="document.getElementById('ytsuggestioncmsgid').disabled = !this.checked; document.getElementById('ytsuggestioncmsgid').required = !!this.checked;"
+          />
+          <input
+            type="number"
+            disabled
+            id="ytsuggestioncmsgid"
+            name="ytsuggestioncmsgid"
+            placeholder="ID"
+          />
+          <p style="color: White">VIP Channel Message ID:</p>
+          <input
+            type="checkbox"
+            onchange="document.getElementById('vipcmsgid').disabled = !this.checked; document.getElementById('vipcmsgid').required = !!this.checked;"
+          />
+          <input
+            type="number"
+            disabled
+            id="vipcmsgid"
+            name="vipcmsgid"
+            placeholder="ID"
+          />
+          <p style="color: White">Counter Number Value:</p>
+          <input
+            type="checkbox"
+            onchange="document.getElementById('countervalue').disabled = !this.checked; document.getElementById('countervalue').required = !!this.checked;"
+          />
+          <input
+            type="number"
+            disabled
+            id="countervalue"
+            name="countervalue"
+            placeholder="Number"
+          />
+          <p></p>
+          <p style="color: White">User Message/Level System:</p>
+          <input
+            type="checkbox"
+            id="msglv_serid_button"
+            onclick="changemsglevelOn(this)"
+          />
+          <input
+            type="number"
+            disabled
+            id="msglv_serid"
+            name="msglv_serid"
+            placeholder="Server ID"
+          />
+          <p></p>
+          <input
+            type="number"
+            disabled
+            id="msglv_userid"
+            name="msglv_userid"
+            placeholder="User ID"
+          />
+          <p></p>
+          <input
+            type="text"
+            disabled
+            id="msglv_msgnum"
+            name="msglv_msgnum"
+            placeholder="Message Number"
+          />
+          <p></p>
+          <input type="submit" value="Submit" />
+        </form>
+        <p></p>
+        <p style="color: White" id="requresing_msg"></p>
+        <a
+          style="color: Yellow"
+          href="https://bot.koolisw.tk/console/"
+          title="Back to Main Console"
+          >Back to Main Console</a
+        >
+      </center>
+    </div>
+    <div class="footer">
+      <p>
+        由
+        <a style="color: White" href="https://discord.koolisw.tk"
+          >酷斯軍團Koolisw Army</a
+        >
+        技術提供・<a
+          style="color: White"
+          href="https://bot.koolisw.tk/console/logout"
+          >登出</a
+        >
+      </p>
+    </div>
+    <script>
+      function myFunction() {
+        document.getElementById('requresing_msg').innerHTML = 'Submitting...'
+      }
+      var checker = document.getElementById('msglv_serid_button')
+      checker.onchange = function () {
+        document.getElementById('msglv_serid').disabled = !this.checked
+        document.getElementById('msglv_serid').required = !!this.checked
+        document.getElementById('msglv_userid').disabled = !this.checked
+        document.getElementById('msglv_userid').required = !!this.checked
+        document.getElementById('msglv_msgnum').disabled = !this.checked
+        document.getElementById('msglv_msgnum').required = !!this.checked
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>API密鑰 - 驗證</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0"
+    />
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <script
+      src="https://static.koolisw.tk/resources/LoadAdobeFont.js"
+      async
+      defer
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://static.koolisw.tk/resources/buttons.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://static.koolisw.tk/resources/style.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://static.koolisw.tk/resources/background.css"
+    />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://static.koolisw.tk/resources/webicon.ico"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://static.koolisw.tk/resources/webicon.ico"
+    />
+  </head>
+
+  <body style="background-color: #2c2f33">
+    <div class="gg">
+      <h1 style="color: White">複製以下API密鑰</h1>
+      <h3 style="color: White">請在我們擁有的所有Discord相關表格開頭輸入。</h3>
+      <br />
+      <h2 name="keyhere" id="keyheree" style="color: White"><%= api_key %></h2>
+      <button onclick="copy('keyheree')">複製</button><br />
+      <br />
+      <h3 style="color: White">將會在六小時後失效</h3>
+    </div>
+    <script nonce="2726c7f26c">
+      window.onbeforeunload = (event) => (event.returnValue = 'Leave Confirm')
+      function copy(id) {
+        var copyText = document.getElementById(id)
+        navigator.clipboard.writeText(copyText.textContent)
+      }
+    </script>
+  </body>
+</html>

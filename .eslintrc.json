@@ -1,0 +1,35 @@
+{
+  "env": {
+    "es2021": true,
+    "node": true
+  },
+  "extends": [
+    "prettier",
+    "airbnb-base",
+    "eslint:recommended",
+    "plugin:sonarjs/recommended",
+    "plugin:unicorn/recommended",
+    "plugin:promise/recommended"
+  ],
+  "parserOptions": {
+    "ecmaVersion": "latest"
+  },
+  "rules": {
+    "semi": 0,
+    "quotes": ["error", "single"],
+    "prefer-const": 2,
+    "no-console": 2,
+    "no-empty": ["error", { "allowEmptyCatch": true }],
+    "eqeqeq": 2,
+    "no-unused-vars": 2,
+    "no-use-before-define": 2,
+    "no-plusplus": [
+      2,
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
+    "unicorn/prefer-module": "off",
+    "unicorn/no-null": ["error", { "checkStrictEquality": true }]
+  }
+}

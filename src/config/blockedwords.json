@@ -1,0 +1,6 @@
+{
+  "invBlocked": ["free", "nitro", "robux"],
+  "linksBlackListed": ["scam.koolisw.tk", "porn"],
+  "robloxWords": ["要r幣", "要r币", "要robux", "給我r", "想要r", "給r", "預約"],
+  "snipeWord": ["k!snipe", "k!s", "k!snipe-revoke", "k!rs", "k!sr"]
+}
